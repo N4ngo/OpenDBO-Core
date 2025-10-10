@@ -1,16 +1,16 @@
 /******************************************************************************
 * File			: DialogPriority.h
 * Author		: Hong SungBock
-* Copyright		: (ÁÖ)NTL
+* Copyright		: (ï¿½ï¿½)NTL
 * Date			: 2008. 2. 12
 * Abstract		: 
 *****************************************************************************
-* Desc			: ´ÙÀÌ¾ó·Î±×ÀÇ ·£´õ¸µ ¿ì¼±¼øÀ§¸¦ Á¤ÀÇÇÑ´Ù
-*				  Å« ¼øÀÚÀÇ °ÍÀÌ À§¿¡ ¿Â´Ù
-*				  ¹üÀ§ : 0 ~ 65534
+* Desc			: ï¿½ï¿½ï¿½Ì¾ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ì¼±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½
+*				  Å« ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Â´ï¿½
+*				  ï¿½ï¿½ï¿½ï¿½ : 0 ~ 65534
 *
-*				  ¿ì¼±¼øÀ§ÀÇ °£°ÝÀ» ³ÐÁ÷È÷ ¹ú·ÁµÎ¾î Â÷ÈÄ ¿ì¼ø¼øÀ§°£ Ãß°¡¸¦
-*				  ¿ëÀÌÇÏµµ·Ï ÇÑ´Ù
+*				  ï¿½ì¼±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Î¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½ï¿½
+*				  ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½
 *****************************************************************************/
 
 #pragma once
@@ -43,27 +43,29 @@
 #define dDIALOGPRIORITY_RESULT_NARRATION								46300
 #define dDIALOGPRIORITY_RESULT											46200
 
-#define dDIALOGPRIORITY_CALC_POPUP										46000	// °è»ê±â
+#define dDIALOGPRIORITY_CALC_POPUP										46000	// ï¿½ï¿½ï¿½ï¿½
 
-#define dDIALOGPRIORITY_PRIVATE_BUSINESS_PRICE							45100	// ÈïÁ¤ °¡°Ý Á¶Á¤ Ã¢
+#define dDIALOGPRIORITY_PRIVATE_BUSINESS_PRICE							45100	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã¢
 
 #define dDIALOGPRIORITY_EFDIALOG										45000	// Entire Focusing Dialog
 #define dDIALOGPRIORITY_EFDIALOG_BACKGROUND								44999	// Entire Focusing Dialog backgound
 
-#define dDIALOGPRIORITY_TBGAMBLERESULT									40000	// ÃµÇÏÁ¦ÀÏ ¹«µµÈ¸ °×ºí °á°úÃ¢
+#define dDIALOGPRIORITY_TBGAMBLERESULT									40000	// Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È¸ ï¿½×ºï¿½ ï¿½ï¿½ï¿½Ã¢
 
-#define dDIALOGPRIORITY_PRIVATE_BUSINESS								35000	// ÈïÁ¤ Ã¢
+#define dDIALOGPRIORITY_PRIVATE_BUSINESS								35000	// ï¿½ï¿½ï¿½ï¿½ Ã¢
 
 #define dDIALOGPRIORITY_RPBONUS											34000
-#define dDIALOGPRIORITY_SKILLABILITY_SET								33500	///< ½ºÅ³ ¾îºô¸®Æ¼ ÁöÁ¤ Ã¢
+#define dDIALOGPRIORITY_SKILLABILITY_SET								33500	///< ï¿½ï¿½Å³ ï¿½ï¿½ï¿½ï¿½Æ¼ ï¿½ï¿½ï¿½ï¿½ Ã¢
 
-#define dDIALOGPRIORITY_MANIA_TIME_SET									33250	///< °ÔÀÓ ¸Å´Ï¾Æ Å¸ÀÓ Àç¼³Á¤ Ã¢
+#define dDIALOGPRIORITY_MANIA_TIME_SET									33250	///< ï¿½ï¿½ï¿½ï¿½ ï¿½Å´Ï¾ï¿½ Å¸ï¿½ï¿½ ï¿½ç¼³ï¿½ï¿½ Ã¢
 
 #define dDIALOGPRIORITY_CHATTING_OPTION									33155
 
 #define dDIALOGPRIORITY_TUTORIAL_FOCUS									33100
 
 #define dDIALOGPRIORITY_MAINMENU										33000
+
+#define dDIALOGPRIORITY_SIDEICON_VIEW									32997 // Hint views when mouse over side icons
 
 #define dDIALOGPRIORITY_INVENTORY										32995
 

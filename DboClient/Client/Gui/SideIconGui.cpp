@@ -45,7 +45,7 @@
 #include "NetPySideIconGui.h"
 #include "NetPySideView.h"
 
-// SideIconÀ» »ý¼ºÇÏ°í SideIconGui¿¡ µî·ÏÇÏ´Â ¸ÅÅ©·Î
+// SideIconï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ SideIconGuiï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½Å©ï¿½ï¿½
 #define RegisterSideIcon( pSideIcon, ClassName, szName, id ) \
 	{ \
 	pSideIcon = NTL_NEW ClassName(szName); \
@@ -63,7 +63,7 @@
 	RocateSideIcon(); \
 	} \
 
-// SideView¸¦ »ý¼ºÇÏ°í SideViewGui¿¡ µî·ÏÇÏ´Â ¸ÅÅ©·Î
+// SideViewï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ SideViewGuiï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½Å©ï¿½ï¿½
 #define RegisterSideView( pSideView, ClassName, szName, id ) \
 	{ \
 	pSideView = NTL_NEW ClassName(szName); \
@@ -77,10 +77,10 @@
 	{ \
 		RegSideView( id, pSideView ); \
 	} \
-	pSideView->GetDialog()->SetPriority( dDIALOGPRIORITY_SIDEICON ); \
+	pSideView->GetDialog()->SetPriority( dDIALOGPRIORITY_SIDEICON_VIEW ); \
 	}
 
-// SideIconÀ» ÇØÁ¦ & ¼Ò¸ê
+// SideIconï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ & ï¿½Ò¸ï¿½
 #define UnRegisterSideIcon( pSideIcon, id ) \
 	{ \
 	if( pSideIcon ) \
@@ -92,7 +92,7 @@
 	RocateSideIcon(); \
 	}
 
-// SideView¸¦ ÇØÁ¦ & ¼Ò¸ê
+// SideViewï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ & ï¿½Ò¸ï¿½
 #define UnRegisterSideView( pSideView, id ) \
 	{ \
 	if( pSideView ) \
@@ -514,7 +514,7 @@ RwInt32 CSideIconGui::SwitchDialog(bool bOpen)
 
 void CSideIconGui::RocateSideIcon()
 {
-	// Á¤·Ä
+	// ï¿½ï¿½ï¿½ï¿½
 	SortSideIcon();
 
 	RwInt32 iPosX		= s_pSideIconGui->GetPosition().left;
@@ -665,13 +665,13 @@ void CSideIconGui::OnSideViewShow(CSideViewBase* pSideView, bool bShow)
 }
 
 /**
-* \brief SideIconÀÇ ¹ú·é Ã¢À» Ãâ·ÂÇÑ´Ù.
+* \brief SideIconï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã¢ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 *
-* SideView´Â ÇÏ³ª¸¸ Ãâ·ÂÇÑ´Ù.
+* SideViewï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 */
 void CSideIconGui::OpenSideView(CSideIconBase* pSideIcon, const eSideViewType& eSideView, void* pData)
 {
-	// DialogMode¶ó¸é SideView¸¦ Ãâ·ÂÇÏÁö ¾Ê´Â´Ù.
+	// DialogModeï¿½ï¿½ï¿½ SideViewï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´Â´ï¿½.
 	if( GetDialogManager()->IsMode( DIALOGMODE_NARRATION ) )
 		return;
 
@@ -779,7 +779,7 @@ void CSideViewBase::Show(bool bShow)
 {
 	if (IsShow() != (RwBool)bShow)
 	{
-		// ³ª·¹ÀÌ¼Ç ¸ðµå Áß, SideView¸¦ SHOW(TRUE)ÇÏ¶ó´Â ¸í·ÉÀÌ ¿Â´Ù¸é ¸®ÅÏÇÑ´Ù.
+		// ï¿½ï¿½ï¿½ï¿½ï¿½Ì¼ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½, SideViewï¿½ï¿½ SHOW(TRUE)ï¿½Ï¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Â´Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 		if( GetDialogManager()->IsMode( DIALOGMODE_NARRATION ) && bShow)
 			return;
 
